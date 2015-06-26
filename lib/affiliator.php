@@ -39,6 +39,9 @@ class affiliator{
 
             }
         }
+        if(isset($_POST['action']) && $_POST['action']=='update'){
+            $this->savesettings();
+        }
     }
 
     function activate()
@@ -725,9 +728,6 @@ class affiliator{
 
         delete_option( 'product_' . $fields['LW_PRODUCT_ID'] );
 
-        if (!is_null($option)) {
-            $option->delete();
-        }
 
 
         echo "Done";
@@ -875,15 +875,15 @@ class affiliator{
         delete_metadata('post', $postid, 'logo');
         delete_metadata('post', $postid, 'datafeed');
         delete_metadata('post', $postid, 'last_checked');
-        $option = \WpOptions::whereOptionName('program_' . $id)->first();
-        $option->delete();
+
+        delete_option( 'program_' . $id );
 
         return "Done";
     }
 
     public function savesettings()
     {
-        $all = Input::all();
+        $all = $_POST;
         if (isset($all['affiliator_texts'])) {
             $general = $all['affiliator_texts'];
         } elseif (isset($all['affiliator_auto_post'])) {
@@ -893,16 +893,9 @@ class affiliator{
         }
 
         foreach ($general as $option => $value) {
-            $wpoption = \WpOptions::whereOptionName($option)->first();
-            if (is_null($wpoption)) {
-                $wpoption = new \WpOptions();
-            }
-            $wpoption->option_name = $option;
-            $wpoption->option_value = $value;
-            $wpoption->autoload = 'yes';
-            $wpoption->save();
+            update_option( $option, $value );
         }
-        return redirect()->back();
+
     }
 
     public function api($what, $param = null)
@@ -1267,7 +1260,7 @@ class affiliator{
                 $this->loadLinkwisePrograms();
                 break;
             case "forestview":
-                 $this->loadForestViewPrograms();
+                $this->loadForestViewPrograms();
                 break;
             default:
                 echo "Παρακαλώ επιλέξτε ένα δίκτυο απο τα παραπάνω";
