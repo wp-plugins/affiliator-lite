@@ -11,7 +11,7 @@ Affiliate plugin that allows you to create a fully powered affiliate site.
 
 == Description ==
 
-Affiliate plugin that allows you to create a fully powered affiliate site. The plugin aims to users from Greece and allows them to import and showcase offers from Linkwise and Forestview.
+Affiliate plugin that allows you to create a fully powered affiliate site. The plugin aims to users from Greece and allows them to import and showcase offers from [Linkwise](http://mikk.ro/EuH) and [Forestview](http://forestvieweu.go2cloud.org/SH1Mc).
 
 
 == Installation ==
