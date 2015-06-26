@@ -13,12 +13,14 @@ Affiliate plugin that allows you to create a fully powered affiliate site.
 
 Affiliate plugin that allows you to create a fully powered affiliate site. The plugin aims to users from Greece and allows them to import and showcase offers from [Linkwise](http://mikk.ro/EuH) and [Forestview](http://forestvieweu.go2cloud.org/SH1Mc).
 
-
 == Installation ==
 
 1. Upload the plugin from the plugins installation screen in WordPress
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
+Depending on your products slug the link to the products listing will be:
+
+www.example.com/{slug} (eg: www.example.com/products If your slug is products)
 
 == Screenshots ==
 
