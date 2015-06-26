@@ -1,0 +1,172 @@
+.afl_clearfix::before, .afl_clearfix::after {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.afl_clearfix::after {
+    clear: both;
+}
+.afl_small_td{
+    width: 80px;
+}
+.afl_table{
+    background-color: #fff;
+}
+.afl_table td {
+    position: relative;
+}
+
+.afl_button{
+    background: #4c9545 none repeat scroll 0 0;
+    border: 1px solid #4cae4c;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 15px;
+}
+.afl_button:hover{
+    background: #fff;
+    color: #4cae4c;
+}
+.afl_old_price {
+    color: #666666;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.afl_old_price::before {
+    content: "Από";
+    display: inline-block;
+    margin-right: 5px;
+}
+.afl_current_price {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+.afl_sale_percent {
+    font-size: 14px;
+}
+
+.afl_sale_percent::before {
+    color: #666666;
+    content: "Κερδίζετε:";
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.afl_wrap{
+    display: block;
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+}
+.afl_wrap li{
+    display: inline-block;
+    float: left;
+    width: 21%;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid #eee;
+}
+
+.afl_wrap li .afl_button{
+    padding: 5px 10px;
+}
+
+.afl_list li{
+    display: block;
+    float: none;
+    clear: both;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 10px;
+    width: 100%;
+}
+
+.afl_title_wrapper > a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.afl_img_wrapper img:hover {
+    transform: scale(1.4);
+}
+.afl_img_wrapper {
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.afl_list .afl_img_wrapper {
+    width: 25%;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+    text-align: left;
+}
+.afl_desc_wrapper {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    padding: 0 10px;
+    text-align: justify;
+    width: 45%;
+}
+
+.afl_other_wrapper{
+    float: left;
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+}
+
+.afl_transition{
+    -webkit-transition: all 700ms ease-out 100ms;
+    -moz-transition: all 700ms ease-out 100ms;
+    -o-transition: all 700ms ease-out 100ms;
+    transition: all 700ms ease-out 100ms;
+}
+
+.afl_views{
+    padding: 10px;
+    background: #fff;
+}
+
+.afl_img_wrapper.left{
+    width: 40%;
+    height: 500px;
+    float: left;
+    display: block;
+}
+
+.afl_desc_wrapper_wide{
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.afl_wrap.wide{
+    width: 100%;
+}
+
+.afl_other_wrapper.right .afl_title_wrapper > a{
+    width: auto;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    font-size: 16px;
+    line-height: 1.3;
+}
+.afl_other_wrapper.right{
+    width:60%;
+    text-align:justify;
+}
