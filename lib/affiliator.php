@@ -746,7 +746,7 @@ class affiliator{
 
 
 
-        $type = (get_option('products_post_type') == 'on') ? 'products' : 'post';
+        $type = (get_option('products_post_type') == 'on') ? get_option('products_post_type_name') : 'post';
 
         $post_status = get_option('affiliator_post_status');
 
