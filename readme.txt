@@ -20,5 +20,18 @@ Affiliate plugin that allows you to create a fully powered affiliate site. The p
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 
+== Screenshots ==
 
+1. Screenshot 1
+2. Screenshot 2
+3. Screenshot 3
+4. Screenshot 4
+5. Screenshot 5
+6. Screenshot 6
+7. Screenshot 7
+8. Screenshot 8
+9. Screenshot 9
+10. Screenshot 10
+11. Screenshot 11
+12. Screenshot 12
 
