@@ -1368,7 +1368,7 @@ class affiliator{
                     </td>
                     <td><?php echo $v['short_description'] ?></td>
                     <td>
-                        <?php if (!$this->affiliator_get_option('program_fv_' . $v['id'])): ?>
+                        <?php if (!$this->affiliator_get_option('program_' . $v['id'])): ?>
                             <a class="button button-primary button-large" data-extra="ajaxpost"
                                href="?page=affiliator-plugin-sites">Προσθήκη</a>
                         <?php else: ?>
