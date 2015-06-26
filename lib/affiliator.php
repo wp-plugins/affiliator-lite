@@ -1302,7 +1302,7 @@ class affiliator{
                     <td><img width="80" src=''/></td>
                     <td><?php echo $v['name'] ?><br/>
                         <input type="hidden" name="program" value="<?php echo 'fv_'.$v['id']?>">
-                        <input type="hidden" name="ajaction" value="addprogram">
+
                         <input type="hidden" name="feedurl"
                                value="http://tools.forestview.eu/xmlp_v2/xml_feeds.php?aid=<?php echo $this->affiliator_get_option('fv_cd', '1296') ?>&cid=<?php echo $v['id'] ?>"/>
                     </td>
@@ -1311,9 +1311,11 @@ class affiliator{
                         <?php if (!$this->affiliator_get_option('program_fv_' . $v['id'])): ?>
                             <a class="button button-primary button-large" data-extra="ajaxpost"
                                href="?page=affiliator-plugin-sites">Προσθήκη</a>
+                            <input type="hidden" name="ajaction" value="addprogram">
                         <?php else: ?>
                             <a class="button submitdelete deletion button-large" data-extra="ajaxpost"
                                href="?page=affiliator-plugin-sites">Αφαίρεση</a>
+                            <input type="hidden" name="ajaction" value="removeprogram">
                         <?php endif; ?>
                         <div class="ajaxresult" style="display: none"><img
                                 src="<?php echo plugins_url('/../images/ajax-load.gif',__FILE__) ?>">
@@ -1362,7 +1364,7 @@ class affiliator{
                     <td><img width="80" src='<?php echo $v['logo'] ?>'/></td>
                     <td><?php echo $v['name'] ?><br/>
                         <input type="hidden" name="program" value="<?php echo $v['id']?>">
-                        <input type="hidden" name="ajaction" value="addprogram">
+
                         <input type="hidden" name="feedurl"
                                value="https://affiliate.linkwi.se/feeds/<?php echo $this->affiliator_get_option('lw_cd', 'CD421') ?>/columns-lw_product_id,product_id,barcode,sku,part_number,isbn,model_name,product_name,description,category,brand_name,site_url,tracking_url,thumb_url,image_url,in_stock,availability,valid_from,valid_to,on_sale,currency,price,full_price,discount,city,times_bought,longitude,latitude,address,size,colour,program_id,program_name,custom/catinc-0/catex-0/proginc-<?php echo $v['id'] ?>/progex-0/feed.xml"/>
                     </td>
@@ -1371,9 +1373,11 @@ class affiliator{
                         <?php if (!$this->affiliator_get_option('program_' . $v['id'])): ?>
                             <a class="button button-primary button-large" data-extra="ajaxpost"
                                href="?page=affiliator-plugin-sites">Προσθήκη</a>
+                            <input type="hidden" name="ajaction" value="addprogram">
                         <?php else: ?>
                             <a class="button submitdelete deletion button-large" data-extra="ajaxpost"
                                href="?page=affiliator-plugin-sites">Αφαίρεση</a>
+                            <input type="hidden" name="ajaction" value="removeprogram">
                         <?php endif; ?>
                         <div class="ajaxresult" style="display: none"><img
                                 src="<?php echo plugins_url('/../images/ajax-load.gif',__FILE__) ?>">
